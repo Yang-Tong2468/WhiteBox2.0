@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ded09cd63dc0704dae65a2893f80032, type: 3}
+  m_Name: Titanium Ingot
+  m_EditorClassIdentifier: 
+  m_ID: 3971603581
+  m_Category: {fileID: 11400000, guid: 9e9287c02435f0a45ab2b2d6f408875f, type: 2}
+  m_IngredientsData:
+    m_ObjectType: Opsive.UltimateInventorySystem.Crafting.IngredientsTypes.CraftingIngredientsWithCurrency
+    m_ValueHashes: 
+    m_LongValueHashes: f1e927d1f07fddb3c801c0065b6ff32547444e8329f5493991c5f68cb635b85542a9f868f58bf64c1d1e3f79ceb54e40256a692a528e9309ad8e4601694f372f1ec72de8b4733c450596769d1aa4e334409bc767a9f88ba012f1737a7fd3bd22adbd6d55ed4279fa3baa47173d8a011f85f7737a7fd3bd2206bc7755ed4279fa90ab5d173d8a011f
+    m_ValuePositions: 0000000000000000040000000400000008000000080000000c0000001000000010000000140000001400000018000000180000001c000000200000002000000024000000
+    m_Values: 00000000010000000200000000000000000000000200000005000000010000000200000002000000
+    m_UnityObjects:
+    - {fileID: 11400000, guid: 976955de7f7681b479b0a6528a35cbc0, type: 2}
+    - {fileID: 11400000, guid: 82d5eda96b75fe847a9c2c3e919d7bb3, type: 2}
+    - {fileID: 11400000, guid: 47567f2f105c42747a2c37f624542b77, type: 2}
+    m_Version: 3.4
+  m_DefaultOutputData:
+    m_ObjectType: Opsive.UltimateInventorySystem.Crafting.CraftingOutput
+    m_ValueHashes: 
+    m_LongValueHashes: ad8e4601694f372f1ec72de8b4733c4526fcb009e72b43d5a963d6b717ab32a337af136bcf01e3c78e57daa5e04312d246b86d28e64312d22037008b7268694534a971ee684bcda89394de679ed8af0fa41cfb2beb8ba6f2
+    m_ValuePositions: 0000000000000000040000000400000008000000080000000c0000000c000000100000001400000014000000
+    m_Values: 01000000010000008561cb03000000000000000000000000
+    m_UnityObjects:
+    - {fileID: 11400000, guid: b94eec8d1ad136040a938e6d28feecf3, type: 2}
+    m_Version: 3.4
+  m_EditorIcon: {fileID: 3434086634727231013, guid: 50fc8ea05e8ba3c4abe0062bb85830c6,
+    type: 3}
