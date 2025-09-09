@@ -14,6 +14,15 @@
         "com.opsive.shared": "2.0.0"
       }
     },
+    "com.slax.schedulemaster": {
+      "version": "https://github.com/FelixBole/schedule-master.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.textmeshpro": "^3.0.6"
+      },
+      "hash": "1f3e2447b35b2d466f34628536892bfce4e5842b"
+    },
     "com.unity.burst": {
       "version": "1.8.18",
       "depth": 1,
@@ -75,6 +84,13 @@
     "com.unity.mathematics": {
       "version": "1.2.6",
       "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.cn"
+    },
+    "com.unity.nuget.newtonsoft-json": {
+      "version": "3.2.1",
+      "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.cn"
