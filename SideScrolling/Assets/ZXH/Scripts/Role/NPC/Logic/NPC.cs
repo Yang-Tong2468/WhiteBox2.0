@@ -194,6 +194,7 @@ public class NPC : MonoBehaviour
     #endregion
 
     #region 其他功能
+    [ContextMenu("更新好感度")]
     public void UpdateAffinity()
     {
         if (AffinitySystem.Instance == null) return;

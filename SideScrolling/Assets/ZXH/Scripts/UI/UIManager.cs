@@ -4,6 +4,7 @@ public class UIManager : MonoBehaviour
 {
     [Header("UI 面板引用")]
     public CharacterStatsPanel statsPanel; // 直接引用脚本本身
+    public AffinityPanelController affinityPanel;
 
     void Update()
     {
@@ -13,6 +14,14 @@ public class UIManager : MonoBehaviour
             if (statsPanel != null)
             {
                 statsPanel.TogglePanel();
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            if (affinityPanel != null)
+            {
+                affinityPanel.TogglePanel();
             }
         }
 

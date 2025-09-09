@@ -1,30 +1,55 @@
 ﻿using UnityEngine;
 using Slax.Schedule;
+using System.Collections.Generic;
+using UnityEngine.Events;
 
 namespace MyGame.Time
 {
-    /// <summary>
-    /// 继承自 ScheduleManager，但改为订阅 APTimeManager 的事件
-    /// 这样你可以保持 ScheduleMaster 的事件查找与广播逻辑不变
-    /// </summary>
-    public class APDrivenScheduleManager : ScheduleManager
+    public class APDrivenScheduleManager : TickObserver
     {
+        public ScheduleEventCheckAssociationSO EventCheckAssociationData;
+        public bool HasInBetweenTickEvents = false;
+
         protected override void OnEnable()
         {
-            // 不调用 base.OnEnable()，避免它订阅原 TimeManager 的事件
-            // base.OnEnable();
-
-            // 订阅我们的 APTimeManager 事件
+            // 不调用 base，避免订阅原 TimeManager
             APTimeManager.OnDateTimeChangedAP += CheckEventOnTick;
-            APTimeManager.OnInBetweenTickFiredAP += FireInBetweenTick;
+            if (HasInBetweenTickEvents)
+                APTimeManager.OnInBetweenTickFiredAP += FireInBetweenTick;
         }
 
         protected override void OnDisable()
         {
             APTimeManager.OnDateTimeChangedAP -= CheckEventOnTick;
-            APTimeManager.OnInBetweenTickFiredAP -= FireInBetweenTick;
-            // 不调用 base.OnDisable() 同样避免取消原订阅
-            // base.OnDisable();
+            if (HasInBetweenTickEvents)
+                APTimeManager.OnInBetweenTickFiredAP -= FireInBetweenTick;
+        }
+
+        protected override void CheckEventOnTick(DateTime date)
+        {
+            List<ScheduleEvent> eventsToStart = _scheduleEvents.GetEventsForTimestamp(date.GetTimestamp());
+            if (eventsToStart.Count == 0) return;
+
+            foreach (var ev in eventsToStart)
+            {
+                Debug.Log($"[ScheduleEvent Fired] ID: {ev.ID}, DateTime: {date.DateToString()} {date.TimeToString()}");
+            }
+
+            if (EventCheckAssociationData != null)
+            {
+                List<ScheduleEvent> filtered = EventCheckAssociationData.RunChecksAndGetPassedEvents(eventsToStart);
+                ScheduleManager.OnScheduleEvents.Invoke(filtered);
+            }
+            else
+            {
+                ScheduleManager.OnScheduleEvents.Invoke(eventsToStart);
+            }
+        }
+
+        protected override void FireInBetweenTick()
+        {
+            if (HasInBetweenTickEvents)
+                ScheduleManager.OnInBetweenTickFired.Invoke();
         }
     }
 }

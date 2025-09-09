@@ -20,11 +20,12 @@ MonoBehaviour:
   _maxYears: 99
   _year: 1
   _date: 1
-  _hour: 5
+  _hour: 8
   _minutes: 1
   _dayConfiguration:
     MorningStartHour: 6
     AfternoonStartHour: 12
     NightStartHour: 19
+    EveningStartHour: 0
   _tickMinutesIncrease: 10
   _timeBetweenTicks: 0.7

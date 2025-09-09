@@ -21,3 +21,5 @@ MonoBehaviour:
     Value: 120
   - Definition: {fileID: 11400000, guid: 062d2fd0bccbc6f47a4dc1c88dc3bb6c, type: 2}
     Value: 80
+  - Definition: {fileID: 11400000, guid: b827155f53648b7498c31b2ae7895ad5, type: 2}
+    Value: 0

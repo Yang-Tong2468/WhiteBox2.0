@@ -8,11 +8,11 @@
     "SkipAutumn": false,
     "SkipWinter": false,
     "Type": 0,
-    "Frequency": 0,
+    "Frequency": 4,
     "Timestamp": {
-      "Day": 1,
-      "Date": 4,
-      "Hour": 7,
+      "Day": 2,
+      "Date": 2,
+      "Hour": 8,
       "Minutes": 0,
       "Year": 1,
       "Season": 0
@@ -39,7 +39,7 @@
     "Frequency": 0,
     "Timestamp": {
       "Day": 1,
-      "Date": 4,
+      "Date": 1,
       "Hour": 8,
       "Minutes": 0,
       "Year": 1,

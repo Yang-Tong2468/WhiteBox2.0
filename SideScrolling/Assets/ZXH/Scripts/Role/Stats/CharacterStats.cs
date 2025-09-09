@@ -50,7 +50,7 @@ public class CharacterStats : MonoBehaviour
 
 
     /// <summary>
-    /// 通过属性ID，对属性的基础值进行加减操作。
+    /// 通过属性ID，对属性的基础值进行加减操作
     /// </summary>
     /// <param name="attributeID">属性的唯一字符串ID</param>
     /// <param name="delta">变化的量（正数为增加，负数为减少）</param>
