@@ -12,7 +12,8 @@ public class TeleportToScene : MonoBehaviour
 
     private bool isTeleporting = false; // 防重入锁
 
-    private void OnTriggerEnter2D(Collider2D other)
+
+    private void OnTriggerEnter(Collider other)
     {
         if (isTeleporting) return; // 已经在传送中，直接忽略
 

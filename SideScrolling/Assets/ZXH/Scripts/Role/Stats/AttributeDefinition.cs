@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(menuName = "RPG/Stats/Attribute Definition", fileName = "Attrib_")]
+[CreateAssetMenu(menuName = "RPG/Stats/Attribute Definition", fileName = "Attribute_")]
 public class AttributeDefinition : ScriptableObject
 {
     [Tooltip("唯一ID，例如 governance/stamina/charisma/gold")]

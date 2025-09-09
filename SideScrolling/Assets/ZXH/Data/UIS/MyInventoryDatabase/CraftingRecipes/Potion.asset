@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c32b874893a67544698a1f68f0dd5540, type: 3}
+  m_Name: Potion
+  m_EditorClassIdentifier: 
+  m_ID: 231541197
+  m_Category: {fileID: 11400000, guid: f015e260a0b09ee4b854c0498c83573c, type: 2}
+  m_IngredientsData:
+    m_ObjectType: Opsive.UltimateInventorySystem.Crafting.CraftingIngredients
+    m_ValueHashes: 
+    m_LongValueHashes: f1e927d1f07fddb3c801c0065b6ff32547444e8329f5493991c5f68cb635b85542a9f868f58bf64c1d1e3f79ceb54e40256a692a528e9309dfaef868f58bf64c944a0679ceb54e40ac3e502a528e9309ad8e4601694f372f1ec72de8b4733c45
+    m_ValuePositions: 0000000000000000040000000400000008000000080000000c0000001000000010000000140000001800000018000000
+    m_Values: 00000000020000000100000000000000010000000100000000000000
+    m_UnityObjects:
+    - {fileID: 11400000, guid: 392b964f0dd82764698ea05c531cfffa, type: 2}
+    - {fileID: 11400000, guid: f321256f766b638448980097a9db6e2f, type: 2}
+    m_Version: 3.4
+  m_DefaultOutputData:
+    m_ObjectType: Opsive.UltimateInventorySystem.Crafting.CraftingOutput
+    m_ValueHashes: 
+    m_LongValueHashes: ad8e4601694f372f1ec72de8b4733c4526fcb009e72b43d5a963d6b717ab32a337af136bcf01e3c78e57daa5e04312d246b86d28e64312d22037008b7268694534a971ee684bcda89394de679ed8af0fa41cfb2beb8ba6f2
+    m_ValuePositions: 0000000000000000040000000400000008000000080000000c0000000c000000100000001400000014000000
+    m_Values: 0100000001000000a9ef1868000000000000000000000000
+    m_UnityObjects:
+    - {fileID: 11400000, guid: 5aac71667fb9737419e4b516d550ec8d, type: 2}
+    m_Version: 3.4
+  m_EditorIcon: {fileID: -1863859237976802683, guid: 50fc8ea05e8ba3c4abe0062bb85830c6,
+    type: 3}
