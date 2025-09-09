@@ -811,7 +811,7 @@ PlayerSettings:
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Standalone: TEXTMESH_PRO_PRESENT
+    Standalone: TEXTMESH_PRO_PRESENT;USE_ARTICY
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}

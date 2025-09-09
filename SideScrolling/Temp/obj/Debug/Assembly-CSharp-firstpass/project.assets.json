@@ -1,0 +1,225 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETStandard,Version=v2.1": {
+      "Opsive.Shared.Editor/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Opsive.Shared.Runtime": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Opsive.Shared.Editor.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Opsive.Shared.Editor.dll": {}
+        }
+      },
+      "Opsive.Shared.Editor.Import/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Opsive.Shared.Editor.Import.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Opsive.Shared.Editor.Import.dll": {}
+        }
+      },
+      "Opsive.Shared.Runtime/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Opsive.Shared.Runtime.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Opsive.Shared.Runtime.dll": {}
+        }
+      },
+      "Opsive.UltimateInventorySystem/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Opsive.Shared.Runtime": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Opsive.UltimateInventorySystem.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Opsive.UltimateInventorySystem.dll": {}
+        }
+      },
+      "Opsive.UltimateInventorySystem.Demo/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Opsive.Shared.Runtime": "1.0.0",
+          "Opsive.UltimateInventorySystem": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Opsive.UltimateInventorySystem.Demo.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Opsive.UltimateInventorySystem.Demo.dll": {}
+        }
+      },
+      "Opsive.UltimateInventorySystem.Editor/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Opsive.Shared.Editor": "1.0.0",
+          "Opsive.Shared.Runtime": "1.0.0",
+          "Opsive.UltimateInventorySystem": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Opsive.UltimateInventorySystem.Editor.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Opsive.UltimateInventorySystem.Editor.dll": {}
+        }
+      },
+      "Opsive.UltimateInventorySystem.Samples/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Opsive.Shared.Runtime": "1.0.0",
+          "Opsive.UltimateInventorySystem": "1.0.0",
+          "Opsive.UltimateInventorySystem.Demo": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Opsive.UltimateInventorySystem.Samples.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Opsive.UltimateInventorySystem.Samples.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Opsive.Shared.Editor/1.0.0": {
+      "type": "project",
+      "path": "Opsive.Shared.Editor.csproj",
+      "msbuildProject": "Opsive.Shared.Editor.csproj"
+    },
+    "Opsive.Shared.Editor.Import/1.0.0": {
+      "type": "project",
+      "path": "Opsive.Shared.Editor.Import.csproj",
+      "msbuildProject": "Opsive.Shared.Editor.Import.csproj"
+    },
+    "Opsive.Shared.Runtime/1.0.0": {
+      "type": "project",
+      "path": "Opsive.Shared.Runtime.csproj",
+      "msbuildProject": "Opsive.Shared.Runtime.csproj"
+    },
+    "Opsive.UltimateInventorySystem/1.0.0": {
+      "type": "project",
+      "path": "Opsive.UltimateInventorySystem.csproj",
+      "msbuildProject": "Opsive.UltimateInventorySystem.csproj"
+    },
+    "Opsive.UltimateInventorySystem.Demo/1.0.0": {
+      "type": "project",
+      "path": "Opsive.UltimateInventorySystem.Demo.csproj",
+      "msbuildProject": "Opsive.UltimateInventorySystem.Demo.csproj"
+    },
+    "Opsive.UltimateInventorySystem.Editor/1.0.0": {
+      "type": "project",
+      "path": "Opsive.UltimateInventorySystem.Editor.csproj",
+      "msbuildProject": "Opsive.UltimateInventorySystem.Editor.csproj"
+    },
+    "Opsive.UltimateInventorySystem.Samples/1.0.0": {
+      "type": "project",
+      "path": "Opsive.UltimateInventorySystem.Samples.csproj",
+      "msbuildProject": "Opsive.UltimateInventorySystem.Samples.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETStandard,Version=v2.1": [
+      "Opsive.Shared.Editor >= 1.0.0",
+      "Opsive.Shared.Editor.Import >= 1.0.0",
+      "Opsive.Shared.Runtime >= 1.0.0",
+      "Opsive.UltimateInventorySystem >= 1.0.0",
+      "Opsive.UltimateInventorySystem.Demo >= 1.0.0",
+      "Opsive.UltimateInventorySystem.Editor >= 1.0.0",
+      "Opsive.UltimateInventorySystem.Samples >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\86178\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Assembly-CSharp-firstpass.csproj",
+      "projectName": "Assembly-CSharp-firstpass",
+      "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Assembly-CSharp-firstpass.csproj",
+      "packagesPath": "C:\\Users\\86178\\.nuget\\packages\\",
+      "outputPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Temp\\obj\\Debug\\Assembly-CSharp-firstpass\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\86178\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netstandard2.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "projectReferences": {
+            "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Editor.csproj": {
+              "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Editor.csproj"
+            },
+            "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Editor.Import.csproj": {
+              "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Editor.Import.csproj"
+            },
+            "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Runtime.csproj": {
+              "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Runtime.csproj"
+            },
+            "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.csproj": {
+              "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.csproj"
+            },
+            "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.Demo.csproj": {
+              "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.Demo.csproj"
+            },
+            "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.Editor.csproj": {
+              "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.Editor.csproj"
+            },
+            "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.Samples.csproj": {
+              "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.Samples.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "netstandard2.1": {
+        "targetAlias": "netstandard2.1",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.412\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
