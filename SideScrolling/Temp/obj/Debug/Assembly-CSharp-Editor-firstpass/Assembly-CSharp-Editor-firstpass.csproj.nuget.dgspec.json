@@ -1,0 +1,585 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Assembly-CSharp-Editor-firstpass.csproj": {}
+  },
+  "projects": {
+    "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Assembly-CSharp-Editor-firstpass.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Assembly-CSharp-Editor-firstpass.csproj",
+        "projectName": "Assembly-CSharp-Editor-firstpass",
+        "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Assembly-CSharp-Editor-firstpass.csproj",
+        "packagesPath": "C:\\Users\\86178\\.nuget\\packages\\",
+        "outputPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Temp\\obj\\Debug\\Assembly-CSharp-Editor-firstpass\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\86178\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Assembly-CSharp-firstpass.csproj": {
+                "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Assembly-CSharp-firstpass.csproj"
+              },
+              "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Editor.csproj": {
+                "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Editor.csproj"
+              },
+              "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Editor.Import.csproj": {
+                "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Editor.Import.csproj"
+              },
+              "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Runtime.csproj": {
+                "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Runtime.csproj"
+              },
+              "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.csproj": {
+                "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.csproj"
+              },
+              "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.Demo.csproj": {
+                "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.Demo.csproj"
+              },
+              "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.Editor.csproj": {
+                "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.Editor.csproj"
+              },
+              "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.Samples.csproj": {
+                "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.Samples.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.412\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Assembly-CSharp-firstpass.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Assembly-CSharp-firstpass.csproj",
+        "projectName": "Assembly-CSharp-firstpass",
+        "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Assembly-CSharp-firstpass.csproj",
+        "packagesPath": "C:\\Users\\86178\\.nuget\\packages\\",
+        "outputPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Temp\\obj\\Debug\\Assembly-CSharp-firstpass\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\86178\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Editor.csproj": {
+                "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Editor.csproj"
+              },
+              "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Editor.Import.csproj": {
+                "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Editor.Import.csproj"
+              },
+              "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Runtime.csproj": {
+                "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Runtime.csproj"
+              },
+              "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.csproj": {
+                "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.csproj"
+              },
+              "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.Demo.csproj": {
+                "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.Demo.csproj"
+              },
+              "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.Editor.csproj": {
+                "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.Editor.csproj"
+              },
+              "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.Samples.csproj": {
+                "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.Samples.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.412\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Editor.csproj",
+        "projectName": "Opsive.Shared.Editor",
+        "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Editor.csproj",
+        "packagesPath": "C:\\Users\\86178\\.nuget\\packages\\",
+        "outputPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Temp\\obj\\Debug\\Opsive.Shared.Editor\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\86178\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Runtime.csproj": {
+                "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Runtime.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.412\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Editor.Import.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Editor.Import.csproj",
+        "projectName": "Opsive.Shared.Editor.Import",
+        "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Editor.Import.csproj",
+        "packagesPath": "C:\\Users\\86178\\.nuget\\packages\\",
+        "outputPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Temp\\obj\\Debug\\Opsive.Shared.Editor.Import\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\86178\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.412\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Runtime.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Runtime.csproj",
+        "projectName": "Opsive.Shared.Runtime",
+        "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Runtime.csproj",
+        "packagesPath": "C:\\Users\\86178\\.nuget\\packages\\",
+        "outputPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Temp\\obj\\Debug\\Opsive.Shared.Runtime\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\86178\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.412\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.csproj",
+        "projectName": "Opsive.UltimateInventorySystem",
+        "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.csproj",
+        "packagesPath": "C:\\Users\\86178\\.nuget\\packages\\",
+        "outputPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Temp\\obj\\Debug\\Opsive.UltimateInventorySystem\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\86178\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Runtime.csproj": {
+                "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Runtime.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.412\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.Demo.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.Demo.csproj",
+        "projectName": "Opsive.UltimateInventorySystem.Demo",
+        "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.Demo.csproj",
+        "packagesPath": "C:\\Users\\86178\\.nuget\\packages\\",
+        "outputPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Temp\\obj\\Debug\\Opsive.UltimateInventorySystem.Demo\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\86178\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Runtime.csproj": {
+                "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Runtime.csproj"
+              },
+              "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.csproj": {
+                "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.412\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.Editor.csproj",
+        "projectName": "Opsive.UltimateInventorySystem.Editor",
+        "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.Editor.csproj",
+        "packagesPath": "C:\\Users\\86178\\.nuget\\packages\\",
+        "outputPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Temp\\obj\\Debug\\Opsive.UltimateInventorySystem.Editor\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\86178\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Editor.csproj": {
+                "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Editor.csproj"
+              },
+              "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Runtime.csproj": {
+                "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Runtime.csproj"
+              },
+              "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.csproj": {
+                "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.412\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.Samples.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.Samples.csproj",
+        "projectName": "Opsive.UltimateInventorySystem.Samples",
+        "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.Samples.csproj",
+        "packagesPath": "C:\\Users\\86178\\.nuget\\packages\\",
+        "outputPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Temp\\obj\\Debug\\Opsive.UltimateInventorySystem.Samples\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\86178\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Runtime.csproj": {
+                "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.Shared.Runtime.csproj"
+              },
+              "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.csproj": {
+                "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.csproj"
+              },
+              "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.Demo.csproj": {
+                "projectPath": "D:\\APP\\BreakingInForCheese\\8AMProject\\WhiteBox2.0\\SideScrolling\\Opsive.UltimateInventorySystem.Demo.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.412\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
