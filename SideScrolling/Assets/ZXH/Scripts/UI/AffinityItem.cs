@@ -18,6 +18,6 @@ public class AffinityItem: MonoBehaviour
     public void Set(string npcId, float value, string tier)
     {
         if (nameText != null) nameText.text = npcId;
-        if (valueText != null) valueText.text = $"好感: {value:F1} | 段位: {tier}";
+        if (valueText != null) valueText.text = $"Affinite Value: {value:F1} | Level: {tier}";
     }
 }
