@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e419c882b16f38c4ea935fb31c6e617c, type: 3}
   m_Name: NPC_JuniorStudent
   m_EditorClassIdentifier: 
-  npcId: JuniorStudent
+  npcId: NPC1
   displayName: JuniorStudent
   scheduleEntries:
   - scheduleEventID: 1

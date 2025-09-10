@@ -29,7 +29,7 @@ public class AffinitySystem : MonoBehaviour
     public static AffinitySystem Instance { get; private set; }
 
     [Header("初始化设置")]
-    [Tooltip("新注册/初始化时的默认好感度（默认 50）")]
+    [Tooltip("新注册/初始化时的默认好感度（默认 5）")]
     public float defaultAffinity = 5f;
 
     public NpcRegistry allNPC;

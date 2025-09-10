@@ -148,6 +148,7 @@ GameObject:
   - component: {fileID: 5421161199612396029}
   - component: {fileID: 6526330398838977350}
   - component: {fileID: 6963726506247970140}
+  - component: {fileID: 920140615931266102}
   m_Layer: 0
   m_Name: NPC1
   m_TagString: Untagged
@@ -236,7 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcName: NPC1
-  conversationTitle: Test
+  conversationTitle: NPC1
   interactionRange: 3
   isInRange: 0
   interactionPrompt: {fileID: 771957471121168871}
@@ -316,6 +317,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitionDuration: 2
+--- !u!114 &920140615931266102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6075122307907569862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ed47bf6ffe80d6478f2a5095e3eaf69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  giftReceivedConversation: NPC3
 --- !u!1 &7372211710008639409
 GameObject:
   m_ObjectHideFlags: 0

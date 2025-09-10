@@ -6,12 +6,13 @@ NPC对话触发器
 */
 using UnityEngine;
 using PixelCrushers.DialogueSystem;
+using MyGame.Time; // 引入APTimeManager
 
 public class NPCDialogueTrigger : MonoBehaviour
 {
     [Header("NPC设置")]
     public string npcName;
-    public string conversationTitle = "";
+    public string conversationTitle;
 
     [Header("触发设置")]
     public float interactionRange;
@@ -115,6 +116,17 @@ public class NPCDialogueTrigger : MonoBehaviour
 
         // 启动对话
         DialogueManager.StartConversation(conversation, transform, player);
+
+        // 消耗一个行动点
+        var apManager = FindObjectOfType<APTimeManager>();
+        if (apManager != null)
+        {
+            apManager.ConsumeAP();
+        }
+        else
+        {
+            Debug.LogWarning("未找到APTimeManager，无法消耗行动点");
+        }
 
         // 监听对话结束事件
         DialogueManager.instance.conversationEnded += OnConversationEnded;

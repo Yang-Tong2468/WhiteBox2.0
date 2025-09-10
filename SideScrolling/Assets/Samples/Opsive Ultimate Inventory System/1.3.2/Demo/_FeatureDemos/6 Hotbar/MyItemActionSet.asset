@@ -34,11 +34,10 @@ MonoBehaviour:
       m_UnityObjects:
       - {fileID: 6362288584643107232, guid: 99f2ccf6e56f42146ad63b866481f569, type: 3}
       m_Version: 3.4
-    - m_ObjectType: Opsive.UltimateInventorySystem.ItemActions.DropItemAction
+    - m_ObjectType: GiftToNPCAction
       m_ValueHashes: 
-      m_LongValueHashes: 0d00eb254f8d1b295bd71d437ac58be10ed8eefff69b58fadb7c171a4fe50f375a775145a114104c93f007348c670bcd
-      m_ValuePositions: 000000000400000008000000090000000a0000000e000000
-      m_Values: 4769667400000000000100000040000000000000000000000000
-      m_UnityObjects:
-      - {fileID: 6362288584643107232, guid: 99f2ccf6e56f42146ad63b866481f569, type: 3}
+      m_LongValueHashes: 0d00eb254f8d1b29
+      m_ValuePositions: 00000000
+      m_Values: 47696674
+      m_UnityObjects: []
       m_Version: 3.4

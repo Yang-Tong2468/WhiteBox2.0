@@ -22,4 +22,19 @@ public class NpcRegistry : ScriptableObject
         }
         return null;
     }
+
+    /// <summary>
+    /// 根据ID获取NPC定义
+    /// </summary>
+    public NpcDefinition GetNpcById(string npcId)
+    {
+        foreach (var mapping in npcMappings)
+        {
+            if (mapping.npcId == npcId)
+            {
+                return mapping;
+            }
+        }
+        return null;
+    }
 }
