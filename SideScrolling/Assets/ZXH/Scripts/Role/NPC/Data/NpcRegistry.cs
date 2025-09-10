@@ -1,17 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-[System.Serializable]
-public class NpcPrefabMapping
-{
-    public string NpcId;
-    public GameObject NpcPrefab;
-}
-
 [CreateAssetMenu(fileName = "NpcRegistry", menuName = "RPG/NPC/NPC Registry")]
 public class NpcRegistry : ScriptableObject
 {
-    public List<NpcPrefabMapping> npcMappings;
+    public List<NpcDefinition> npcMappings;
 
     /// <summary>
     /// 根据ID获取NPC预制体
@@ -22,7 +15,7 @@ public class NpcRegistry : ScriptableObject
     {
         foreach (var mapping in npcMappings)
         {
-            if (mapping.NpcId == npcId)
+            if (mapping.npcId == npcId)
             {
                 return mapping.NpcPrefab;
             }
