@@ -2870,6 +2870,18 @@ MonoBehaviour:
   baseAttributeSet: {fileID: 11400000, guid: 0003003f195b64e41b77878c77555459, type: 2}
   initialModifiers: []
   onAttributeChanged: {fileID: 11400000, guid: 5411b591292a9914da93cd0e6f0f86f6, type: 2}
+--- !u!114 &616443490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616443463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22ae20af6f59dab46bd31f20c14e1ad3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &628976846
 GameObject:
   m_ObjectHideFlags: 0
@@ -14253,6 +14265,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 616443479}
+    - targetCorrespondingSourceObject: {fileID: 5270772108366314131, guid: 0ce072e083153464990cbd6187668ec4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 616443490}
   m_SourcePrefab: {fileID: 100100000, guid: 0ce072e083153464990cbd6187668ec4, type: 3}
 --- !u!114 &994713620171816743
 MonoBehaviour:

@@ -46,6 +46,9 @@ namespace MyGame.Time
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         protected override void FireInBetweenTick()
         {
             if (HasInBetweenTickEvents)
