@@ -1,4 +1,4 @@
-/*
+﻿/*
 NPC对话触发器
   - 检测Player接近距离（可调节范围）
   - 按T键触发对话
@@ -6,7 +6,8 @@ NPC对话触发器
 */
 using UnityEngine;
 using PixelCrushers.DialogueSystem;
-using MyGame.Time; // 引入APTimeManager
+using MyGame.Time;
+using System; // 引入APTimeManager
 
 public class NPCDialogueTrigger : MonoBehaviour
 {
@@ -22,7 +23,13 @@ public class NPCDialogueTrigger : MonoBehaviour
     [Header("UI提示")]
     public GameObject interactionPrompt;
 
+    [Header("AP设置")]
+    public int apCost = 1;
+
     private Transform player;
+
+    // 本触发器生成并管理的 token（当前对话的唯一标识）
+    private string _currentToken = null;
 
     void Start()
     {
@@ -101,32 +108,62 @@ public class NPCDialogueTrigger : MonoBehaviour
     {
         if (isConversationActive || string.IsNullOrEmpty(conversationTitle)) return;
 
-        isConversationActive = true;
+        // 1) 生成 token 并注册（保证唯一）
+        _currentToken = $"conversation:{npcName}:{Guid.NewGuid()}";
+        if (PlayerActionStateManager.Instance != null)
+        {
+            PlayerActionStateManager.Instance.StartAction(_currentToken);
+        }
+        else
+        {
+            Debug.LogWarning("PlayerActionStateManager 未找到，仍继续，但可能会导致状态无法正确管理");
+        }
 
-        // 确定要开始的对话
-        string conversation = GetConversationToStart();
+        // 2) 尝试消耗 AP
+        string reason;
+        var apManager = FindObjectOfType<APTimeManager>(); // 兼容你的实现（非单例）
+        //if (apManager == null)
+        //{
+        //    Debug.LogWarning("APTimeManager 未找到，继续对话但不会消耗行动点");
+        //    // 启动对话，但依然需要监听结束以清理 token
+        //    StartConversation_Internal();
+        //    return;
+        //}
+
+        if (!apManager.TryConsumeAP(apCost, out reason))
+        {
+            // AP 不足：撤销 token 并提示玩家
+            if (PlayerActionStateManager.Instance != null) PlayerActionStateManager.Instance.EndAction(_currentToken);
+            _currentToken = null;
+            ShowUIMessage(reason);
+            return;
+        }
+
 
         // 检查对话管理器是否存在
         if (DialogueManager.instance == null)
         {
             Debug.LogError("Dialogue Manager未找到，无法开始对话");
             isConversationActive = false;
+
+            //回滚token
+            if (PlayerActionStateManager.Instance != null && _currentToken != null)
+            {
+                // 回滚 token（虽然 AP 已扣了）
+                PlayerActionStateManager.Instance.EndAction(_currentToken);
+                _currentToken = null;
+            }
             return;
         }
 
+        isConversationActive = true;
+        if (interactionPrompt != null) interactionPrompt.SetActive(false);
+
+        // 确定要开始的对话
+        string conversation = GetConversationToStart();
+
         // 启动对话
         DialogueManager.StartConversation(conversation, transform, player);
-
-        // 消耗一个行动点
-        var apManager = FindObjectOfType<APTimeManager>();
-        if (apManager != null)
-        {
-            apManager.ConsumeAP();
-        }
-        else
-        {
-            Debug.LogWarning("未找到APTimeManager，无法消耗行动点");
-        }
 
         // 监听对话结束事件
         DialogueManager.instance.conversationEnded += OnConversationEnded;
@@ -152,7 +189,17 @@ public class NPCDialogueTrigger : MonoBehaviour
     {
         if (actor == transform)
         {
+            // 恢复提示状态（如果玩家依然在范围内）
             isConversationActive = false;
+            if (isInRange && interactionPrompt != null) interactionPrompt.SetActive(true);
+
+            // 清理本触发器生成的 token（若存在）
+            if (!string.IsNullOrEmpty(_currentToken) && PlayerActionStateManager.Instance != null)
+            {
+                PlayerActionStateManager.Instance.EndAction(_currentToken);
+            }
+            _currentToken = null;
+
             if (DialogueManager.instance != null)
             {
                 DialogueManager.instance.conversationEnded -= OnConversationEnded;
@@ -166,5 +213,11 @@ public class NPCDialogueTrigger : MonoBehaviour
         // 在场景视图中显示交互范围
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, interactionRange);
+    }
+
+    private void ShowUIMessage(string msg)
+    {
+        Debug.Log($"[UI] {msg}");
+        // TODO: 替换成项目内真实的 UI 提示方法（弹窗/吐司）
     }
 }

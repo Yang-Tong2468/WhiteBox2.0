@@ -1,4 +1,4 @@
-// using System;
+﻿// using System;
 // using UnityEngine;
 // using Opsive.UltimateInventorySystem.ItemActions;
 // using Opsive.UltimateInventorySystem.Core.DataStructures;
@@ -93,6 +93,7 @@ using UnityEngine;
 using Opsive.UltimateInventorySystem.ItemActions;
 using Opsive.UltimateInventorySystem.Core.DataStructures;
 using MyGame.Time;
+using UnityEditorInternal;
 
 [Serializable]
 public class GiftToNPCAction : ItemAction
@@ -131,11 +132,19 @@ public class GiftToNPCAction : ItemAction
         // 移除物品
         itemInfo.Inventory.RemoveItem((ItemInfo)(1, itemInfo));
 
+        string reason;
         // 消耗行动点
         var apManager = UnityEngine.Object.FindObjectOfType<APTimeManager>();
         if (apManager != null)
         {
-            apManager.ConsumeAP();
+            apManager.TryConsumeAP(1, out reason);
+            ShowUIMessage(reason);
         }
+    }
+
+    private void ShowUIMessage(string msg)
+    {
+        Debug.Log($"[UI] {msg}");
+        // TODO: 替换成项目内真实的 UI 提示方法（弹窗/吐司）
     }
 }
