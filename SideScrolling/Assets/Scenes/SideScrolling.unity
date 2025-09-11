@@ -3695,7 +3695,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: description
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0c65f2e47b75a284c995ffcb6c78d698, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 53d52f79e55b86f4e967e7bdaaddd307, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3703,7 +3703,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5722,7 +5722,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1409050913
@@ -29173,22 +29173,22 @@ PrefabInstance:
     - target: {fileID: 2434481196330481669, guid: 2506f920053ed07489d5206d292718e8,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2434481196330481669, guid: 2506f920053ed07489d5206d292718e8,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2434481196330481669, guid: 2506f920053ed07489d5206d292718e8,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2434481196330481669, guid: 2506f920053ed07489d5206d292718e8,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2826975414794210971, guid: 2506f920053ed07489d5206d292718e8,
         type: 3}
@@ -29203,22 +29203,22 @@ PrefabInstance:
     - target: {fileID: 3650231172144258993, guid: 2506f920053ed07489d5206d292718e8,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3650231172144258993, guid: 2506f920053ed07489d5206d292718e8,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3650231172144258993, guid: 2506f920053ed07489d5206d292718e8,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 350
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3650231172144258993, guid: 2506f920053ed07489d5206d292718e8,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3729705279061404240, guid: 2506f920053ed07489d5206d292718e8,
         type: 3}
@@ -29243,7 +29243,7 @@ PrefabInstance:
     - target: {fileID: 7703813582301039584, guid: 2506f920053ed07489d5206d292718e8,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7703813582301039584, guid: 2506f920053ed07489d5206d292718e8,
         type: 3}
@@ -29253,7 +29253,7 @@ PrefabInstance:
     - target: {fileID: 7703813582301039584, guid: 2506f920053ed07489d5206d292718e8,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7703813582301039584, guid: 2506f920053ed07489d5206d292718e8,
         type: 3}
@@ -29303,12 +29303,12 @@ PrefabInstance:
     - target: {fileID: 7703813582301039584, guid: 2506f920053ed07489d5206d292718e8,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 350
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7703813582301039584, guid: 2506f920053ed07489d5206d292718e8,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7703813582301039584, guid: 2506f920053ed07489d5206d292718e8,
         type: 3}
@@ -53636,6 +53636,18 @@ MonoBehaviour:
           m_StringArgument: NPC2
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1538184013}
+        m_TargetAssemblyTypeName: GiftManager, Assembly-CSharp
+        m_MethodName: SetTargetNPC
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: NPC2
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7808723618594325322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61850,7 +61862,6 @@ SceneRoots:
   - {fileID: 1538605284}
   - {fileID: 992487300731970421}
   - {fileID: 637246669}
-  - {fileID: 508521412}
   - {fileID: 3194821618097807465}
   - {fileID: 438142684}
   - {fileID: 1272022641384556242}
@@ -61861,3 +61872,4 @@ SceneRoots:
   - {fileID: 1536518525}
   - {fileID: 1822192554}
   - {fileID: 1538184014}
+  - {fileID: 508521412}
