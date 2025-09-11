@@ -1,18 +1,16 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
-using Slax.Schedule; // 使用 Schedule Master 的 DateTime / DayConfiguration 等类型
+using Slax.Schedule;
 
 namespace MyGame.Time
 {
-    /// <summary>
-    /// AP 驱动的时间推进器（按阶段推进：早/中/晚/夜）
-    /// 它会广播自己的 OnDateTimeChangedAP 事件，供派生的 ScheduleManager 订阅
-    /// </summary>
     public class APTimeManager : MonoBehaviour
     {
+        [Header("AP 配置")]
         public int maxAPPerDay = 4;
         public int currentAP;
 
+        [Header("时间配置")]
         public TimeConfigurationSO timeConfiguration;
 
         public enum Phase { Morning = 0, Midday, Evening, Night }
@@ -23,7 +21,10 @@ namespace MyGame.Time
 
         private DateTime _dateTime;
 
-        void Awake()
+        // 标记是否已有一次 pending 的推进在等玩家空闲
+        private bool _waitingForIdle = false;
+
+        private void Awake()
         {
             currentAP = maxAPPerDay;
             if (timeConfiguration != null)
@@ -33,7 +34,6 @@ namespace MyGame.Time
                     (int)timeConfiguration.Season,
                     timeConfiguration.Year,
                     timeConfiguration.Hour,
-                    //timeConfiguration.Minutes
                     0,
                     timeConfiguration.DayConfiguration
                 );
@@ -47,52 +47,146 @@ namespace MyGame.Time
 
         private void Start()
         {
-            Debug.Log($"[APTimeManager] Tick to {_dateTime.DateToString()} {_dateTime.TimeToString()}");
-            // 初始通知
+            Debug.Log($"[APTimeManager] Initialized: {_dateTime.DateToString()} {_dateTime.TimeToString()} | AP={currentAP}/{maxAPPerDay}");
             OnDateTimeChangedAP?.Invoke(_dateTime);
         }
 
-
-        [ContextMenu("Consume 1 AP (Debug)")]
-        private void ContextConsumeAP()
+        /// <summary>
+        /// 行动的入口
+        /// 尝试消耗 cost 点行动点
+        /// 返回 true 表示被接受（已扣点或已安排）；false 表示被拒绝（reason 给出原因）
+        /// 规则：
+        /// - 如果 cost > currentAP -> 拒绝
+        /// - 否则扣点，如果扣点后 currentAP>0 -> 触发 OnInBetweenTickFiredAP
+        /// - 如果扣点后 currentAP<=0 -> 标记等待推进，只有当 PlayerActionStateManager 报 Idle 时才推进阶段
+        /// </summary>
+        public bool TryConsumeAP(int cost, out string reason)
         {
-            ConsumeAP();
-        }
-
-        public void ConsumeAP(int cost = 1)
-        {
-            currentAP -= cost;
-            if (currentAP <= 0)
+            reason = null;
+            if (cost <= 0)
             {
-                AdvancePhases(1);
-                currentAP = maxAPPerDay;
+                reason = "消耗必须为正整数";
+                return false;
+            }
+
+            if (cost > currentAP)
+            {
+                reason = $"行动点不足（需要 {cost}，当前 {currentAP}）";
+                return false;
+            }
+
+            // 扣点
+            currentAP -= cost;
+            Debug.Log($"[APTimeManager] 消耗 {cost} AP，剩余 {currentAP}/{maxAPPerDay}");
+
+            if (currentAP > 0)
+            {
+                // 仍有剩余 -> 触发 in-between tick
+                OnInBetweenTickFiredAP?.Invoke();
             }
             else
             {
-                OnInBetweenTickFiredAP?.Invoke();
+                // AP 正好耗尽或负（按逻辑应该 =0），开始等待玩家空闲后推进一次阶段
+                if (!_waitingForIdle)
+                {
+                    _waitingForIdle = true;
+                    Debug.Log("[APTimeManager] AP 用尽，等待 PlayerActionStateManager 变为 Idle 后推进时间段。");
+
+                    // 如果玩家现在已空闲，则直接推进；否则订阅 OnBecameIdle
+                    if (PlayerActionStateManager.Instance != null && PlayerActionStateManager.Instance.CurrentState == PlayerActionStateManager.PlayerState.Idle)
+                    {
+                        DoPendingAdvance();
+                    }
+                    else
+                    {
+                        if (PlayerActionStateManager.Instance != null)
+                        {
+                            PlayerActionStateManager.Instance.OnBecameIdle += OnPlayerBecameIdle_Handler;
+                        }
+                        else
+                        {
+                            // 没有 Manager 的兜底：直接推进
+                            Debug.LogWarning("[APTimeManager] 找不到 PlayerActionStateManager，直接推进时间段以避免停滞。");
+                            DoPendingAdvance();
+                        }
+                    }
+                }
+                else
+                {
+                    Debug.Log("[APTimeManager] 已在等待推进中（忽略重复等待请求）");
+                }
             }
+
+            return true;
         }
 
+        /// <summary>
+        /// 监听角色转换到空闲状态
+        /// </summary>
+        private void OnPlayerBecameIdle_Handler()
+        {
+            // 取消订阅并推进
+            if (PlayerActionStateManager.Instance != null)
+                PlayerActionStateManager.Instance.OnBecameIdle -= OnPlayerBecameIdle_Handler;
+
+            DoPendingAdvance();
+        }
+
+        /// <summary>
+        /// 推进
+        /// </summary>
+        private void DoPendingAdvance()
+        {
+            if (!_waitingForIdle) return;
+            _waitingForIdle = false;
+
+            // 推进一个阶段（你的原逻辑）
+            AdvancePhases(1);
+
+            // 重置 AP（遵循你原有逻辑：消耗完后重置为 max）
+            currentAP = maxAPPerDay;
+            Debug.Log($"[APTimeManager] 推进完成，AP 重置为 {currentAP}/{maxAPPerDay}");
+        }
+
+        /// <summary>
+        /// 逐阶段推进（保留你原有实现的日历/跨日逻辑）
+        /// </summary>
         public void AdvancePhases(int steps)
         {
             for (int i = 0; i < steps; i++)
             {
                 currentPhase = (Phase)(((int)currentPhase + 1) % 4);
 
-                int hour = currentPhase switch
+                int hour;
+                if (timeConfiguration != null)
                 {
-                    Phase.Morning => timeConfiguration.DayConfiguration.MorningStartHour,
-                    Phase.Midday => timeConfiguration.DayConfiguration.AfternoonStartHour,
-                    Phase.Evening => timeConfiguration.DayConfiguration.EveningStartHour,
-                    Phase.Night => timeConfiguration.DayConfiguration.NightStartHour,
-                    _ => timeConfiguration.DayConfiguration.MorningStartHour
-                };
+                    var dc = timeConfiguration.DayConfiguration;
+                    hour = currentPhase switch
+                    {
+                        Phase.Morning => dc.MorningStartHour,
+                        Phase.Midday => dc.AfternoonStartHour,
+                        Phase.Evening => dc.EveningStartHour,
+                        Phase.Night => dc.NightStartHour,
+                        _ => dc.MorningStartHour
+                    };
+                }
+                else
+                {
+                    hour = currentPhase switch
+                    {
+                        Phase.Morning => 8,
+                        Phase.Midday => 12,
+                        Phase.Evening => 16,
+                        Phase.Night => 20,
+                        _ => 8
+                    };
+                }
 
                 if (currentPhase == Phase.Morning)
                 {
-                    var status = _dateTime.SetNewDay();
-                    // SetNewDay handles date/season/year transitions
+                    _dateTime.SetNewDay();
                 }
+
                 _dateTime = new DateTime(
                     _dateTime.Date,
                     (int)_dateTime.Season,
@@ -102,47 +196,23 @@ namespace MyGame.Time
                     _dateTime.DayConfiguration
                 );
 
-                Debug.Log($"[APTimeManager] Tick to {_dateTime.DateToString()} {_dateTime.TimeToString()}");
+                Debug.Log($"[APTimeManager] Tick -> {_dateTime.DateToString()} {_dateTime.TimeToString()}");
                 OnDateTimeChangedAP?.Invoke(_dateTime);
             }
         }
-        //private int PhaseToHour(Phase p)
-        //{
-        //    if (timeConfiguration != null)
-        //    {
-        //        var dc = timeConfiguration.DayConfiguration;
-        //        switch (p)
-        //        {
-        //            case Phase.Morning: return dc.MorningStartHour;
-        //            case Phase.Midday: return dc.AfternoonStartHour;
-        //            case Phase.Evening: return Mathf.Max(dc.AfternoonStartHour + 4, dc.AfternoonStartHour); // 自定义逻辑
-        //            case Phase.Night: return dc.NightStartHour;
-        //        }
-        //    }
-        //    // fallback
-        //    return p == Phase.Morning ? 8 : p == Phase.Midday ? 12 : p == Phase.Evening ? 16 : 20;
-        //}
 
-        // 手动推进多个阶段（如一次行动跨越多阶段）
-        public void AdvanceBySteps(int steps) => AdvancePhases(steps);
-
-        // 存档关键数据（示例：用 JSON 或 PlayerPrefs）
-        public string GetSaveStateJson()
+        // 可选：强制推进（调试用）
+        public void ForceAdvanceOnePhase()
         {
-            var state = new { currentAP, phase = (int)currentPhase, date = _dateTime.Date, year = _dateTime.Year };
-            return JsonUtility.ToJson(state);
-        }
+            if (_waitingForIdle)
+            {
+                // 如果在等空闲就直接推进并取消等待
+                if (PlayerActionStateManager.Instance != null)
+                    PlayerActionStateManager.Instance.OnBecameIdle -= OnPlayerBecameIdle_Handler;
+                _waitingForIdle = false;
+            }
 
-        public void LoadFromJson(string json)
-        {
-            // 简化加载，实际项目请做校验
-            var state = JsonUtility.FromJson<APTimeSaveState>(json);
-            currentAP = state.currentAP;
-            currentPhase = (Phase)state.phase;
-            // 恢复 _dateTime 需要更完整的字段
+            AdvancePhases(1);
         }
-
-        [System.Serializable]
-        private class APTimeSaveState { public int currentAP; public int phase; public int date; public int year; }
     }
 }
