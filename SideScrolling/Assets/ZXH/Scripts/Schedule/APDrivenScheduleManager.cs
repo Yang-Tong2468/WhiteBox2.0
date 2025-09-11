@@ -10,6 +10,11 @@ namespace MyGame.Time
         public ScheduleEventCheckAssociationSO EventCheckAssociationData;
         public bool HasInBetweenTickEvents = false;
 
+        void Awake()
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+
         protected override void OnEnable()
         {
             // 不调用 base，避免订阅原 TimeManager

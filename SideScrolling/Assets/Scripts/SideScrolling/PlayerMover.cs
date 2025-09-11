@@ -12,6 +12,11 @@ public class PlayerMover : MonoBehaviour
     public float Zmax;
     public float Zmin;
 
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
     void Update()
     {
         float h = Input.GetAxis("Horizontal"); // A/D 或 ←/→

@@ -7,7 +7,11 @@ public class GiftManager : MonoBehaviour
     public static GiftManager Instance { get; private set; }
     public string CurrentTargetNPCName { get; private set; }
 
-    void Awake() { Instance = this; }
+    void Awake()
+    {
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
 
     public void SetTargetNPC(string npcName)
     {

@@ -27,6 +27,7 @@ namespace MyGame.Time
         private void Awake()
         {
             currentAP = maxAPPerDay;
+            DontDestroyOnLoad(gameObject);
             if (timeConfiguration != null)
             {
                 _dateTime = new DateTime(

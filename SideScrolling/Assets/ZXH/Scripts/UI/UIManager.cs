@@ -6,6 +6,11 @@ public class UIManager : MonoBehaviour
     public CharacterStatsPanel statsPanel; // 直接引用脚本本身
     public AffinityPanelController affinityPanel;
 
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
     void Update()
     {
         // 在这里集中处理所有UI的快捷键

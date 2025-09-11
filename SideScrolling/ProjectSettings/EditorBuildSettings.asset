@@ -6,12 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/PersistentScene.unity
+    guid: 6d8323b4acbb7e84f8c5396c1c3cf712
+  - enabled: 1
+    path: Assets/Scenes/SideScrolling 2.unity
+    guid: 91a00509a03a7ee40a925d21958aaf19
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Relationship.unity
     guid: 59e310335e023f841a007d4ba5f898ba
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SideScrolling.unity
     guid: 882af7fe711e3964aa37212c17723158
   m_configObjects: {}

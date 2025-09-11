@@ -10,9 +10,9 @@ public class ActivePanelByTab : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.M))
         {
-            Debug.Log("已点击K键");
+            Debug.Log("已点击M键");
             // if (toggleMode)
             // {
             //     ShowPanel();
